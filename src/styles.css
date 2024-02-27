@@ -1,1 +1,69 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Playfair";
+  src: url("https://assets.codepen.io/209981/PlayfairDisplay-Regular.ttf");
+}
+:root {
+  --bg-color: #fac2f4;
+  --bg-color-dark: #80497f;
+  --bg-color-blue: #497280;
+  --red: #e74c3c;
+  --blue: #3498db;
+}
+body {
+  height: 100vh;
+  background-image: url("https://assets.codepen.io/209981/glitter-gradient-soft.jpg");
+  background-size: cover;
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.btn {
+  box-sizing: border-box;
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid var(--red);
+  border-radius: 0.6em;
+  color: var(--red);
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: 20px;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Playfair", serif;
+  font-weight: 700;
+
+  font-size: 1.5vw;
+  &:hover,
+  &:focus {
+    color: var(--bg-color-dark);
+    outline: 0;
+  }
+}
+.third {
+  border-color: var(--bg-color);
+  color: var(--bg-color);
+  box-shadow: 0 0 40px 40px rgba(255, 251, 251, 0.5) inset,
+    0 0 0 0 rgba(255, 251, 251, 0.5);
+  transition: all 150ms ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 10px 0 var(--blue) inset, 0 0 10px 4px var(--blue);
+  }
+}
